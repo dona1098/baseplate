@@ -84,3 +84,10 @@ script:
     - sphinx-build -M doctest docs/ build/
     - sphinx-build -M spelling docs/ build/
     - make lint
+deploy:
+  provider: pypi
+  user: cshoe
+  password:
+    secure: Xon+rSBd4OqwGfWaNfiHwhyBXNioVTC20k14VNIWDySdGi2iVSsQtzN2sqmyDAv7Wx8Fs7/4SSqAthQ8yg/8uOtadcgcalRg9UzaWd/yf5wUGWaH0voocq3gyCDGUrp8tMt8xfaflr7WLN6EOdtVUzpaHjVG6m1wyb7m/R9jdy5hj+b1xzNJB9NDkUHbPIvtpxdY+lrU1401XF0ET9Wog4nmxAFjjkLlLUJ8d+zg+WG830chGzPOq6OZ0pfxTy2b2abpgtZbuaH3nVV0w7eXSTAf4Cub2Fv7VpbL+DXUOKgsNmvAjwm23HAs+7qIWlxDXXpuG5Mnvn7r07I/tkhN+TdAQrpA3/VJ/iUYOxiGJZ1EMGgbPnH4YKNoAIEUvunxCvFanD+iSe+u1oyzlu81aoR+p2MubeER1OGIOzjX+GU6t61QImEUP6CuhRh5E5QnRvAMDplAWpdR8F4DgRDoYgYiCOCLFOSaKFEDTYjW6tJ8BK6tY3mzAEM3PkeyhXQWBdrHrxJ0KJe6WhRnJ39AuDIZfG3bT5rO361UKGUNZ+Y9+NF3FRvfwLzqeTE0PrHHoiLKhZOvnwEwmw2n1yxgYj5RqkIlYESs9KocoivEGKhOclGJkBfM2xYLaJXFyhEU2nrQLO1AxzqFtc+cY6z0gymjPgdMhyGYhKx9qOY83KQ=
+  on:
+    tags: true
