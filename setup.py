@@ -69,7 +69,7 @@ class BuildPyCommand(setuptools.command.build_py.build_py):
 
 
 setup(
-    name="baseplate",
+    name="test-baseplate",
     description="A library to build services on",
     long_description=open("README.rst").read(),
     author="Neil Williams",
