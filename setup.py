@@ -76,7 +76,7 @@ setup(
     author_email="neil@reddit.com",
     license="BSD",
     url="https://baseplate.readthedocs.io/en/stable/",
-    version="0.27.0-alpha",
+    version="0.27.0-beta",
 
     packages=find_packages(exclude=["tests", "tests.*"]),
 
