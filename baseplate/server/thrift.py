@@ -54,6 +54,13 @@ class GeventServer(StreamServer):
             trans.close()
 
 
+def report_concurrency(pool):
+    import time
+    while True:
+        print("THERE ARE %d GREENLETS" % len(pool.greenlets))
+        time.sleep(1)
+
+
 def make_server(config, listener, app):
     max_concurrency = int(config.get("max_concurrency", 0)) or None
     stop_timeout = int(config.get("stop_timeout", 0))
@@ -65,4 +72,8 @@ def make_server(config, listener, app):
         spawn=pool,
     )
     server.stop_timeout = stop_timeout
+
+    import gevent
+    gevent.spawn(report_concurrency, pool)
+
     return server
