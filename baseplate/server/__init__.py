@@ -29,6 +29,9 @@ from ..integration.thrift import RequestContext
 logger = logging.getLogger(__name__)
 
 
+ServerMetrics = collections.namedtuple("ServerMetrics", ["concurrency"])
+
+
 def parse_args(args):
     parser = argparse.ArgumentParser(
         description=sys.modules[__name__].__doc__,
